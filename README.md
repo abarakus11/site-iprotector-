@@ -24,6 +24,12 @@ Depois de iniciar o servidor, use **http://127.0.0.1:8844/** (a raiz mostra `ind
 
 O ficheiro **`index.html`** na raiz é servido automaticamente na URL acima. O ficheiro **`.nojekyll`** desativa o Jekyll do GitHub para evitar surpresas com ficheiros estáticos.
 
+## Vercel
+
+Este site é **estático** (só `index.html` e ficheiros auxiliares). O ficheiro **`vercel.json`** define `framework: null` e sem build, para o Vercel não procurar `main.py` nem runtime Python.
+
+Se um deploy antigo ainda falhar: no painel Vercel, **Project → Settings → General → Framework Preset** → escolha **Other** e remova qualquer **Root Directory** ou comando de build apontando para Python.
+
 ## Desenvolvimento
 
 ```bash
