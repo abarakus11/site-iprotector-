@@ -6,14 +6,16 @@ direto do disco (endereco file:///...). Por isso aparece "Erro 153".
 
 SOLUCAO MAIS SIMPLES
 --------------------
-1. Na Area de trabalho, faz duplo clique em UM destes:
+1. Nesta pasta, faz duplo clique em UM destes:
 
       servir-iprotector.bat
       servir-iprotector.ps1   (botao direito > Executar com PowerShell, se o .bat falhar)
 
 2. Espera 1–2 segundos: o script abre o browser em:
 
-      http://127.0.0.1:8844/iprotector.html
+      http://127.0.0.1:8844/
+
+   (O Python serve automaticamente o ficheiro index.html na raiz.)
 
 3. O video de fundo deve carregar normalmente. Prima ENTER na janela
    preta para parar o servidor quando terminar.
@@ -21,12 +23,12 @@ SOLUCAO MAIS SIMPLES
 
 ALTERNATIVAS
 ------------
-- No Cursor/VS Code: botao direito em iprotector.html > "Open with Live Server"
-- Na pasta da Area de trabalho, no terminal:
+- No Cursor/VS Code: botao direito em index.html > "Open with Live Server"
+- Nesta pasta, no terminal:
 
       npx --yes serve@14 . -l 8844
 
-  Depois abre http://127.0.0.1:8844/iprotector.html
+  Depois abre http://127.0.0.1:8844/
 
 
 NOTA

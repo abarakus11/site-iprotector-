@@ -1,21 +1,34 @@
 # site-iprotector-
 
-Landing page estática da **IPROTECTOR** — proteção privada sob demanda. O site é um único ficheiro HTML com CSS e JavaScript incorporados.
+Landing page estática da **IPROTECTOR** — proteção privada sob demanda. Um único ficheiro HTML com CSS e JavaScript incorporados.
 
-## Conteúdo
+## Ver no browser (ficheiro local)
+
+Abra **`index.html`** diretamente no navegador (duplo clique).
+
+## Servidor local (vídeo do hero sem erro 153 do YouTube)
 
 | Ficheiro | Descrição |
 |----------|-----------|
-| `iprotector.html` | Página completa (abrir no navegador ou publicar como está) |
-| `servir-iprotector.ps1` | Script PowerShell para servidor HTTP local |
-| `servir-iprotector.bat` | Atalho para iniciar o servidor no Windows |
-| `LEIA-ME-IPROTECTOR-SERVIDOR.txt` | Instruções do servidor local |
+| `servir-iprotector.ps1` | Inicia `python -m http.server` na porta **8844** e abre o site |
+| `servir-iprotector.bat` | Chama o script PowerShell |
+| `LEIA-ME-IPROTECTOR-SERVIDOR.txt` | Instruções detalhadas |
 
-## Ver localmente
+Depois de iniciar o servidor, use **http://127.0.0.1:8844/** (a raiz mostra `index.html`).
 
-- Abra `iprotector.html` diretamente no navegador, ou
-- Execute `servir-iprotector.bat` (ou o `.ps1`) e aceda à URL indicada no ficheiro LEIA-ME (útil para pré-visualizar o vídeo do hero com HTTP).
+## GitHub Pages
 
-## GitHub Pages (opcional)
+1. No repositório: **Settings → Pages**  
+2. **Source:** Deploy from a branch → **Branch:** `main` → pasta **`/ (root)`** → Save  
+3. O site fica em: **https://abarakus11.github.io/site-iprotector-/**
 
-Neste repositório, em **Settings → Pages**, pode publicar a partir da branch `main` e pasta raiz, usando `iprotector.html` como entrada ou renomeando para `index.html` se preferir a URL limpa.
+O ficheiro **`index.html`** na raiz é servido automaticamente na URL acima. O ficheiro **`.nojekyll`** desativa o Jekyll do GitHub para evitar surpresas com ficheiros estáticos.
+
+## Desenvolvimento
+
+```bash
+git clone https://github.com/abarakus11/site-iprotector-.git
+cd site-iprotector-
+# editar index.html, depois:
+git add -A && git commit -m "mensagem" && git push
+```

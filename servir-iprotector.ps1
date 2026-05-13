@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
 Set-Location $root
 $port = 8844
-$url = "http://127.0.0.1:$port/iprotector.html"
+$url = "http://127.0.0.1:$port/"
 
 function Find-PythonLauncher {
     foreach ($name in @('py', 'python', 'python3')) {
